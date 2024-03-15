@@ -32,6 +32,34 @@ class DataMakananPage extends StatelessWidget {
               'Nomor Telepon: $phoneNumber',
               style: TextStyle(fontSize: 24),
             ),
+            SizedBox(height: 16),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Makanan',
+              ),
+              // Buat validator jika diperlukan
+            ),
+            SizedBox(height: 16),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Minuman',
+              ),
+              // Buat validator jika diperlukan
+            ),
+            SizedBox(height: 16),
+            TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Dessert',
+              ),
+              // Buat validator jika diperlukan
+            ),
+             SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                // Tambahkan logika untuk menangani penekanan tombol submit di sini
+              },
+              child: Text('Submit'),
+            ),
             
           ],
         ),
