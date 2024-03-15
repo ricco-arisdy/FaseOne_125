@@ -115,24 +115,28 @@ class _MyFormState extends State<MyForm> {
               SizedBox(height: 16),
               Center(
   child: ElevatedButton(
-    onPressed: () {
-      if (_formKey.currentState!.validate()) {
-        _formKey.currentState!.save();
-        // Now you can use the form values
-        print('Name: $_name');
-        print('Address: $_address');
-        print('Phone Number: $_phoneNumber');
-        print('Gender: $_gender');
-        
-        // Setelah data disubmit, pindah ke halaman DataMakananPage
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => DataMakananPage()),
-        );
-      }
-    },
-    child: Text('Submit'),
-  ),
+  onPressed: () {
+    if (_formKey.currentState!.validate()) {
+      _formKey.currentState!.save();
+      // Now you can use the form values
+      print('Name: $_name');
+      print('Address: $_address');
+      print('Phone Number: $_phoneNumber');
+      print('Gender: $_gender');
+      
+      // Setelah data disubmit, pindah ke halaman DataMakananPage
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DataMakananPage(
+          name: _name,
+          phoneNumber: _phoneNumber,
+        )),
+      );
+    }
+  },
+  child: Text('Submit'),
+),
+
 ),
             ],
           ),
